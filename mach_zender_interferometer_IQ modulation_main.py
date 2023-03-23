@@ -13,7 +13,7 @@ wl1 = 1550e-9
 freq1 = c / wl1
 
 samplerate = 4*8192 # NUmber of Points
-stept = 0.002 * 1e-15 #[s]
+stept = 0.01 * 1e-15 #[s]
 tcol = np.linspace(0.0, stept * samplerate, samplerate, endpoint=False)
 
 amp_sine = 0.5*np.pi
@@ -83,7 +83,7 @@ while b1[i]<np.size(prbs1):
 
 # Arm B
 
-b2_range = [3000, 5000]
+b2_range = [2000, 4000]
 b2 = np.random.rand(samplerate) *(b2_range[1]-b2_range[0]) + b2_range[0] # range for frequency
 b2 = np.round(b2)
 b2 = b2.astype(int)
@@ -321,28 +321,20 @@ ax5 = fig1.add_subplot(6, 1, 5)
 ax6 = fig1.add_subplot(6, 1, 6)
 
 ax1.plot(tcol,signal1col, "-", color="c")
+ax1.set_ylabel("digital signal [a.u.]")
 #ax1.set_ylim(-1*np.pi,np.pi)
 ax1.grid()
 
 ax2.plot(tcol,np.real(E6out_p1_col), "-",color="c")
+ax2.set_ylabel("Electric Field")
 
 ax3.plot(tcol,signal2col, "-",color="y")
-#ax2.set_ylim(-1*np.pi,np.pi)
-#ax2.set_ylabel("Power")
+ax3.set_ylabel("digital signal [a.u.]")
 ax3.grid()
 
 ax4.plot(tcol,np.real(E6out_p2_col), "-",color="y")
 ax4.set_ylabel("Electric Field")
 
-#ax3.plot(tcol,np.real(E7out_p1_col), "-",color="c")
-#ax3.set_ylim(-1.1,1.1)
-#ax3.set_ylabel("Electric Field")
-#ax3.grid()
-
-#ax4.plot(tcol,(np.abs(E7out_p1_col))**2, "-",color="c")
-#ax4.set_ylim(-0.1,1.1)
-#ax4.set_ylabel("Power")
-#ax4.grid()
 
 
 ax5.plot(tcol,np.real(E7out_p1_col), "-",color="m")
@@ -352,7 +344,7 @@ ax5.grid()
 
 ax6.plot(tcol,(np.abs(E7out_p1_col))**2, "-",color="m")
 ax6.set_ylim(-0.1,1.1)
-ax6.set_ylabel("Optical Power (Not measured)")
+ax6.set_ylabel("Optical Power (Not measured)",{"fontsize": 6})
 ax6.grid()
 
 
@@ -365,22 +357,20 @@ ax23 = fig2.add_subplot(4, 1, 3)
 ax24 = fig2.add_subplot(4, 1, 4)
 
 ax21.plot(tcol, np.real(E9_2out_port1col), "-",color="c")
-#ax21.set_ylim(-1.1,1.1)
+ax21.set_ylabel("Electric Field")
 ax21.grid()
 
 ax22.plot(tcol, (np.abs(E9_2out_port1col))**2 - (np.abs(E9_2out_port2col))**2, "-",color="c")
-ax22.set_ylim(-0.5,0.5)
-ax22.set_ylabel("Optical Power (Balanced Photo Diode)")
+ax22.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
 ax22.grid()
 
 
 ax23.plot(tcol, np.real(E9_1out_port1col), "-",color="y")
-#ax23.set_ylim(-0.6,0.6)
+ax23.set_ylabel("Electric Field")
 ax23.grid()
 
 ax24.plot(tcol, -1*((np.abs(E9_1out_port1col))**2 - (np.abs(E9_1out_port2col))**2), "-",color="y")
-ax24.set_ylim(-0.5,0.5)
-ax24.set_ylabel("Optical Power (Balanced Photo Diode)")
+ax24.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
 ax24.grid()
 
 
