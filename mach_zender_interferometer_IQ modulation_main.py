@@ -352,7 +352,7 @@ ax5.grid()
 
 ax6.plot(tcol,(np.abs(E7out_p1_col))**2, "-",color="m")
 ax6.set_ylim(-0.1,1.1)
-ax6.set_ylabel("Power")
+ax6.set_ylabel("Optical Power (Not measured)")
 ax6.grid()
 
 
@@ -364,21 +364,23 @@ ax22 = fig2.add_subplot(4, 1, 2)
 ax23 = fig2.add_subplot(4, 1, 3)
 ax24 = fig2.add_subplot(4, 1, 4)
 
-ax21.plot(tcol, np.real(E9_1out_port1col), "-",color="c")
+ax21.plot(tcol, np.real(E9_2out_port1col), "-",color="c")
 #ax21.set_ylim(-1.1,1.1)
 ax21.grid()
 
-ax22.plot(tcol, (np.abs(E9_1out_port1col))**2 - (np.abs(E9_1out_port2col))**2, "-",color="c")
+ax22.plot(tcol, (np.abs(E9_2out_port1col))**2 - (np.abs(E9_2out_port2col))**2, "-",color="c")
 ax22.set_ylim(-0.5,0.5)
+ax22.set_ylabel("Optical Power (Balanced Photo Diode)")
 ax22.grid()
 
 
-ax23.plot(tcol, np.real(E9_2out_port1col), "-",color="m")
+ax23.plot(tcol, np.real(E9_1out_port1col), "-",color="y")
 #ax23.set_ylim(-0.6,0.6)
 ax23.grid()
 
-ax24.plot(tcol, (np.abs(E9_2out_port1col))**2 - (np.abs(E9_2out_port2col))**2, "-",color="m")
+ax24.plot(tcol, -1*((np.abs(E9_1out_port1col))**2 - (np.abs(E9_1out_port2col))**2), "-",color="y")
 ax24.set_ylim(-0.5,0.5)
+ax24.set_ylabel("Optical Power (Balanced Photo Diode)")
 ax24.grid()
 
 
