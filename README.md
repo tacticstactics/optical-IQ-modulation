@@ -9,4 +9,4 @@ Tx
 Rx
 ![Figure_2](https://user-images.githubusercontent.com/30459885/227135469-faab6883-e74f-43fe-a800-df3bacccc5ec.png)
 
-Balanced Photodetector allows to recover sinals.
+Balanced Photodetector helps to recover sinals.
