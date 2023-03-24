@@ -12,8 +12,9 @@ print('')
 wl1 = 1550e-9
 freq1 = c / wl1
 
-samplerate = 4*8192 # NUmber of Points
-stept = 0.01 * 1e-15 #[s]
+samplerate = 2 ** 16 # NUmber of Points
+stept = 2 ** -50 #[s]
+print(stept)
 tcol = np.linspace(0.0, stept * samplerate, samplerate, endpoint=False)
 
 amp_sine = 0.5*np.pi
