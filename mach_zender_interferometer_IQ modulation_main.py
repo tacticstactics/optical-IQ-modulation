@@ -125,15 +125,16 @@ while b2[i]<np.size(prbs2):
 
 #signal1col = cosine_signalcol
 #signal1col = sine_signalcol
-#signal1col = random_signal
-signal1col = prbs2
-#signal1col = np.zeros(samplerate, dtype=complex)
 #signal1col = randomintcol
+#signal1col = random_signal
+signal1col = prbs1
+#signal1col = np.zeros(samplerate, dtype=complex)
+
 
 #signal2col = sine_signalcol
 #signal2col = random_signal
-signal2col = prbs1
-#signal2col = -1*np.pi*np.ones(samplerate, dtype=complex)
+signal2col = prbs2
+#signal2col = 0.5*np.pi*np.ones(samplerate)
 
 
 #
@@ -372,6 +373,7 @@ ax23.grid()
 
 ax24.plot(tcol, -1*((np.abs(E9_1out_port1col))**2 - (np.abs(E9_1out_port2col))**2), "-",color="y")
 ax24.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
+ax24.set_ylim(-0.1,0.21)
 ax24.grid()
 
 
