@@ -115,6 +115,19 @@ while b2[i]<np.size(prbs2):
     prbs2[k:] = a2[i]
     i=i+1
 
+#
+rand_int = 0.5*np.pi * np.random.randint(0, 4, samplerate) # 0 to 3
+
+#
+P1 = 2 ** 12  # period
+D1 = 2 ** 11   # width of pulse
+periodicsig1 = 1*np.pi*(np.arange(samplerate) % P1 < D1)
+
+#
+P2 = 2 ** 14  # period
+D2 = 2 ** 12   # width of pulse
+periodicsig2 = 1*np.pi*(np.arange(samplerate) % P2 < D2)
+
 
 #----
 
@@ -127,13 +140,14 @@ while b2[i]<np.size(prbs2):
 #signal1col = sine_signalcol
 #signal1col = randomintcol
 #signal1col = random_signal
-signal1col = prbs1
+signal1col = periodicsig1
 #signal1col = np.zeros(samplerate, dtype=complex)
 
 
 #signal2col = sine_signalcol
 #signal2col = random_signal
-signal2col = prbs2
+#signal2col = prbs2
+signal2col = periodicsig2
 #signal2col = 0.5*np.pi*np.ones(samplerate)
 
 
