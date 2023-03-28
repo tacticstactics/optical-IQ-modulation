@@ -2,6 +2,7 @@
 optical-IQ-modulation
 
 "In-phase" and "quadrature"
+Optical I/Q modulator consists of two independently-controlled MZIs whose outputs are combined. The combining structure also includes a bias electrode that applies a phase delay between the two MZIs, allowing for the required phase control between the two modulator arms.
 
 Tx
 ![IQ modulation1](https://user-images.githubusercontent.com/30459885/228159937-5da4aa4e-00e3-413c-a731-7c4748cfd60f.png)
