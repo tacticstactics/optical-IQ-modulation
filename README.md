@@ -4,11 +4,11 @@ optical-IQ-modulation
 "In-phase" and "quadrature"
 
 Tx
-![IQ modulation Tx](https://user-images.githubusercontent.com/30459885/227409185-aaad1899-b9d6-49a9-8ef7-8573ab0213c2.png)
+![IQ modulation1](https://user-images.githubusercontent.com/30459885/228159937-5da4aa4e-00e3-413c-a731-7c4748cfd60f.png)
 ![Figure_1](https://user-images.githubusercontent.com/30459885/228153151-be906128-30f4-4ce5-9949-10e73b35c671.png)
 
 Rx
-![IQ modulation Rx](https://user-images.githubusercontent.com/30459885/227144153-19edc3a5-4217-4ba2-99a1-1be4c41dc9d2.png)
+![IQ modulation2](https://user-images.githubusercontent.com/30459885/228159953-37af5815-74ea-45ff-a793-7ed1d7fb91f7.png)
 ![Figure_2](https://user-images.githubusercontent.com/30459885/228153158-7815d279-4362-49e5-b11b-44d1998c534a.png)
 ![Figure_3](https://user-images.githubusercontent.com/30459885/228153167-0a6a2506-12ac-44ec-b3ce-ec123bf8b166.png)
 
