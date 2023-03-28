@@ -25,7 +25,7 @@ amp_cosine = 0.5*np.pi
 freq_cosine1 = 1e12 # [Hz]
 
 
-#sinesignal
+#sine_signal
 sine_signalcol = np.zeros(samplerate, dtype=complex)
 for ii in range(samplerate):       
     t = tcol[ii]
@@ -33,7 +33,7 @@ for ii in range(samplerate):
     sine_signalcol[ii] = sinesignal  
 
 
-#cossignal
+#cosine_signal
 cosine_signalcol = np.zeros(samplerate, dtype=complex)
 for ii in range(samplerate):       
     t = tcol[ii]
@@ -140,14 +140,15 @@ periodicsig2 = 1*np.pi*(np.arange(samplerate) % P2 < D2)
 #signal1col = sine_signalcol
 #signal1col = randomintcol
 #signal1col = random_signal
-signal1col = periodicsig1
+signal1col = prbs1
+#signal1col = periodicsig1
 #signal1col = np.zeros(samplerate, dtype=complex)
 
 
 #signal2col = sine_signalcol
 #signal2col = random_signal
-#signal2col = prbs2
-signal2col = periodicsig2
+signal2col = prbs2
+#signal2col = periodicsig2
 #signal2col = 0.5*np.pi*np.ones(samplerate)
 
 
@@ -277,10 +278,8 @@ for ii in range(samplerate):
     E7out_port2 = E7_out[1,0] #reflect
     E7out_p2_col[ii] = E7out_port2
 
-
     #print(E7out_port2)
     #print("")
-
 
     #Receiver 
 
@@ -327,7 +326,7 @@ for ii in range(samplerate):
 
 
 
-fig1 = plt.figure(figsize = (10,10), facecolor='lightblue')
+fig1 = plt.figure(figsize = (10,8), facecolor='lightblue')
 
 ax1 = fig1.add_subplot(6, 1, 1)
 ax2 = fig1.add_subplot(6, 1, 2)
@@ -365,30 +364,77 @@ ax6.grid()
 
 
 
-fig2 = plt.figure(figsize = (10,6), facecolor='lightblue')
+fig2 = plt.figure(figsize = (10,8), facecolor='lightblue')
 
-ax21 = fig2.add_subplot(4, 1, 1)
-ax22 = fig2.add_subplot(4, 1, 2)
-ax23 = fig2.add_subplot(4, 1, 3)
-ax24 = fig2.add_subplot(4, 1, 4)
+ax21 = fig2.add_subplot(6, 1, 1)
+ax22 = fig2.add_subplot(6, 1, 2)
+ax23 = fig2.add_subplot(6, 1, 3)
+ax24 = fig2.add_subplot(6, 1, 4)
+ax25 = fig2.add_subplot(6, 1, 5)
+ax26 = fig2.add_subplot(6, 1, 6)
 
 ax21.plot(tcol, np.real(E9_2out_port1col), "-",color="c")
 ax21.set_ylabel("Electric Field")
 ax21.grid()
 
-ax22.plot(tcol, (np.abs(E9_2out_port1col))**2 - (np.abs(E9_2out_port2col))**2, "-",color="c")
-ax22.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
+ax22.plot(tcol, (np.abs(E9_2out_port1col))**2, "-",color="c")
+ax22.set_ylabel("Optical Power",{"fontsize": 6})
 ax22.grid()
 
 
-ax23.plot(tcol, np.real(E9_1out_port1col), "-",color="y")
+ax23.plot(tcol, np.real(E9_2out_port2col), "-",color="y")
 ax23.set_ylabel("Electric Field")
 ax23.grid()
 
-ax24.plot(tcol, -1*((np.abs(E9_1out_port1col))**2 - (np.abs(E9_1out_port2col))**2), "-",color="y")
-ax24.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
+ax24.plot(tcol, -1*(np.abs(E9_2out_port2col))**2, "-",color="y")
+ax24.set_ylabel("Optical Power",{"fontsize": 6})
 ax24.set_ylim(-0.1,0.21)
 ax24.grid()
+
+ax25.plot(tcol, (np.abs(E9_2out_port1col))**2, tcol, (np.abs(E9_2out_port2col))**2, "-")
+ax25.set_ylabel("Optical Power",{"fontsize": 6})
+ax25.grid()
+
+ax26.plot(tcol, (np.abs(E9_2out_port1col))**2 - (np.abs(E9_2out_port2col))**2, "-",color="c")
+ax26.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
+ax26.grid()
+
+
+
+fig3 = plt.figure(figsize = (10,8), facecolor='lightblue')
+
+ax31 = fig3.add_subplot(6, 1, 1)
+ax32 = fig3.add_subplot(6, 1, 2)
+ax33 = fig3.add_subplot(6, 1, 3)
+ax34 = fig3.add_subplot(6, 1, 4)
+ax35 = fig3.add_subplot(6, 1, 5)
+ax36 = fig3.add_subplot(6, 1, 6)
+
+ax31.plot(tcol, np.real(E9_1out_port1col), "-",color="c")
+ax31.set_ylabel("Electric Field")
+ax31.grid()
+
+ax32.plot(tcol, (np.abs(E9_1out_port1col))**2, "-",color="c")
+ax32.set_ylabel("Optical Power",{"fontsize": 6})
+ax32.grid()
+
+
+ax33.plot(tcol, np.real(E9_1out_port2col), "-",color="y")
+ax33.set_ylabel("Electric Field")
+ax33.grid()
+
+ax34.plot(tcol, -1*(np.abs(E9_1out_port2col))**2, "-",color="y")
+ax34.set_ylabel("Optical Power",{"fontsize": 6})
+ax34.set_ylim(-0.1,0.21)
+ax34.grid()
+
+ax35.plot(tcol, (np.abs(E9_1out_port1col))**2, tcol, (np.abs(E9_1out_port2col))**2, "-")
+ax35.set_ylabel("Optical Power",{"fontsize": 6})
+ax35.grid()
+
+ax36.plot(tcol, (np.abs(E9_1out_port1col))**2 - (np.abs(E9_1out_port2col))**2, "-",color="c")
+ax36.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
+ax36.grid()
 
 
 plt.show()
