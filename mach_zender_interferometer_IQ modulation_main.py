@@ -42,7 +42,7 @@ for ii in range(samplerate):
 
 
 
-#prbs
+#prbs pseudo random signal
 amp_prbs = 1*np.pi
 
 # Random_signal generation
@@ -118,7 +118,7 @@ while b2[i]<np.size(prbs2):
 #
 rand_int = 0.5*np.pi * np.random.randint(0, 4, samplerate) # 0 to 3
 
-#
+#Periodic signal
 P1 = 2 ** 12  # period
 D1 = 2 ** 11   # width of pulse
 periodicsig1 = 1*np.pi*(np.arange(samplerate) % P1 < D1)
@@ -136,8 +136,8 @@ periodicsig2 = 1*np.pi*(np.arange(samplerate) % P2 < D2)
 #    randomintcol[ii] = np.random.random_integers(2)
 
 
-#signal1col = cosine_signalcol
 #signal1col = sine_signalcol
+#signal1col = cosine_signalcol
 #signal1col = randomintcol
 #signal1col = random_signal
 signal1col = prbs1
@@ -150,7 +150,6 @@ signal1col = prbs1
 signal2col = prbs2
 #signal2col = periodicsig2
 #signal2col = 0.5*np.pi*np.ones(samplerate)
-
 
 #
 oplcommon1 = 0 * np.pi #Common Path Length 1
@@ -180,8 +179,9 @@ IPB2 = 0 * np.pi #In Phase Bias: Optical Phase delay between Arm A and B
 # Define Input Electric Field
 
 # Input: Port 1 only
-E1in = np.array([[1+0.00j],[0-0.00j]])
+E1in = np.array([[1+0.j],[0-0.00j]])
 #E1in = np.array([[0.707+0.707j],[0]])
+#E1in = np.array([[-1+0j],[0-0.00j]])
 
 # Input Both 1 and 2 port
 #Ein1 = np.array([[1+0j],[1-0j]]) 
