@@ -152,7 +152,7 @@ signal2col = prbs2
 #signal2col = 0.5*np.pi*np.ones(samplerate)
 
 #
-oplcommon1 = 0 * np.pi #Common Path Length 1
+oplcommon1 = 1 * np.pi #Common Path Length 1
 oplcommon2 = 0 * np.pi #Common Path Length 2
 
 #opl1 =100 
@@ -326,7 +326,7 @@ for ii in range(samplerate):
 
 
 
-fig1 = plt.figure(figsize = (10,8), facecolor='lightblue')
+fig1 = plt.figure(figsize = (10,8), facecolor='white')
 
 ax1 = fig1.add_subplot(6, 1, 1)
 ax2 = fig1.add_subplot(6, 1, 2)
@@ -335,36 +335,36 @@ ax4 = fig1.add_subplot(6, 1, 4)
 ax5 = fig1.add_subplot(6, 1, 5)
 ax6 = fig1.add_subplot(6, 1, 6)
 
-ax1.plot(tcol,signal1col, "-", color="c")
+ax1.plot(tcol,signal1col, "-", color="m")
 ax1.set_ylabel("digital signal [a.u.]")
 #ax1.set_ylim(-1*np.pi,np.pi)
 ax1.grid()
 
-ax2.plot(tcol,np.real(E6out_p1_col), "-",color="c")
+ax2.plot(tcol,np.real(E6out_p1_col), "-",color="m")
 ax2.set_ylabel("Electric Field")
 
-ax3.plot(tcol,signal2col, "-",color="y")
+ax3.plot(tcol,signal2col, "-",color="b")
 ax3.set_ylabel("digital signal [a.u.]")
 ax3.grid()
 
-ax4.plot(tcol,np.real(E6out_p2_col), "-",color="y")
+ax4.plot(tcol,np.real(E6out_p2_col), "-",color="b")
 ax4.set_ylabel("Electric Field")
 
 
 
-ax5.plot(tcol,np.real(E7out_p1_col), "-",color="m")
+ax5.plot(tcol,np.real(E7out_p1_col), "-",color="k")
 ax5.set_ylim(-1.1,1.1)
 ax5.set_ylabel("Electric Field")
 ax5.grid()
 
-ax6.plot(tcol,(np.abs(E7out_p1_col))**2, "-",color="m")
+ax6.plot(tcol,(np.abs(E7out_p1_col))**2, "-",color="k")
 ax6.set_ylim(-0.1,1.1)
 ax6.set_ylabel("Optical Power (Not measured)",{"fontsize": 6})
 ax6.grid()
 
 
 
-fig2 = plt.figure(figsize = (10,8), facecolor='lightblue')
+fig2 = plt.figure(figsize = (10,8), facecolor='white')
 
 ax21 = fig2.add_subplot(6, 1, 1)
 ax22 = fig2.add_subplot(6, 1, 2)
@@ -373,11 +373,11 @@ ax24 = fig2.add_subplot(6, 1, 4)
 ax25 = fig2.add_subplot(6, 1, 5)
 ax26 = fig2.add_subplot(6, 1, 6)
 
-ax21.plot(tcol, np.real(E9_2out_port1col), "-",color="c")
+ax21.plot(tcol, np.real(E9_2out_port1col), "-",color="r")
 ax21.set_ylabel("Electric Field")
 ax21.grid()
 
-ax22.plot(tcol, (np.abs(E9_2out_port1col))**2, "-",color="c")
+ax22.plot(tcol, (np.abs(E9_2out_port1col))**2, "-",color="r")
 ax22.set_ylabel("Optical Power",{"fontsize": 6})
 ax22.grid()
 
@@ -388,20 +388,20 @@ ax23.grid()
 
 ax24.plot(tcol, -1*(np.abs(E9_2out_port2col))**2, "-",color="y")
 ax24.set_ylabel("Optical Power",{"fontsize": 6})
-ax24.set_ylim(-0.1,0.21)
 ax24.grid()
 
-ax25.plot(tcol, (np.abs(E9_2out_port1col))**2, tcol, (np.abs(E9_2out_port2col))**2, "-")
+ax25.plot(tcol, (np.abs(E9_2out_port1col))**2, "-", color="r")
+ax25.plot(tcol, (np.abs(E9_2out_port2col))**2, "-", color="y")
 ax25.set_ylabel("Optical Power",{"fontsize": 6})
 ax25.grid()
 
-ax26.plot(tcol, (np.abs(E9_2out_port1col))**2 - (np.abs(E9_2out_port2col))**2, "-",color="c")
+ax26.plot(tcol, (np.abs(E9_2out_port1col))**2 - (np.abs(E9_2out_port2col))**2, "-",color="m")
 ax26.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
 ax26.grid()
 
 
 
-fig3 = plt.figure(figsize = (10,8), facecolor='lightblue')
+fig3 = plt.figure(figsize = (10,8), facecolor='white')
 
 ax31 = fig3.add_subplot(6, 1, 1)
 ax32 = fig3.add_subplot(6, 1, 2)
@@ -410,29 +410,29 @@ ax34 = fig3.add_subplot(6, 1, 4)
 ax35 = fig3.add_subplot(6, 1, 5)
 ax36 = fig3.add_subplot(6, 1, 6)
 
-ax31.plot(tcol, np.real(E9_1out_port1col), "-",color="c")
+ax31.plot(tcol, np.real(E9_1out_port1col), "-",color="g")
 ax31.set_ylabel("Electric Field")
 ax31.grid()
 
-ax32.plot(tcol, (np.abs(E9_1out_port1col))**2, "-",color="c")
+ax32.plot(tcol, (np.abs(E9_1out_port1col))**2, "-",color="g")
 ax32.set_ylabel("Optical Power",{"fontsize": 6})
 ax32.grid()
 
 
-ax33.plot(tcol, np.real(E9_1out_port2col), "-",color="y")
+ax33.plot(tcol, np.real(E9_1out_port2col), "-",color="c")
 ax33.set_ylabel("Electric Field")
 ax33.grid()
 
-ax34.plot(tcol, -1*(np.abs(E9_1out_port2col))**2, "-",color="y")
+ax34.plot(tcol, (np.abs(E9_1out_port2col))**2, "-",color="c")
 ax34.set_ylabel("Optical Power",{"fontsize": 6})
-ax34.set_ylim(-0.1,0.21)
 ax34.grid()
 
-ax35.plot(tcol, (np.abs(E9_1out_port1col))**2, tcol, (np.abs(E9_1out_port2col))**2, "-")
+ax35.plot(tcol, (np.abs(E9_1out_port1col))**2, color="g")
+ax35.plot(tcol, (np.abs(E9_1out_port2col))**2, color="c")
 ax35.set_ylabel("Optical Power",{"fontsize": 6})
 ax35.grid()
 
-ax36.plot(tcol, (np.abs(E9_1out_port1col))**2 - (np.abs(E9_1out_port2col))**2, "-",color="c")
+ax36.plot(tcol, -1*((np.abs(E9_1out_port1col))**2 - (np.abs(E9_1out_port2col))**2), "-",color="b")
 ax36.set_ylabel("Optical Power (Balanced Photo Diode)",{"fontsize": 6})
 ax36.grid()
 
