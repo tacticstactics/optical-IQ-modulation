@@ -9,7 +9,7 @@ Tx
 ![Figure_1](https://user-images.githubusercontent.com/30459885/228153151-be906128-30f4-4ce5-9949-10e73b35c671.png)
 
 Rx
-![IQ modulation2](https://user-images.githubusercontent.com/30459885/228159953-37af5815-74ea-45ff-a793-7ed1d7fb91f7.png)
+![222](https://github.com/tacticstactics/optical-IQ-modulation/assets/30459885/8fbc7448-44f3-4d97-9479-ae09e8215572)
 ![Figure_2](https://user-images.githubusercontent.com/30459885/228153158-7815d279-4362-49e5-b11b-44d1998c534a.png)
 ![Figure_3](https://user-images.githubusercontent.com/30459885/228153167-0a6a2506-12ac-44ec-b3ce-ec123bf8b166.png)
 
