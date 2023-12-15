@@ -22,23 +22,22 @@ Rx
 Balanced Photodetector allows to recover original sinals.<br>
 
 ![Figure_2](https://user-images.githubusercontent.com/30459885/228153158-7815d279-4362-49e5-b11b-44d1998c534a.png)
-Electric field of Signal1(PD3)<br>
-PD3 Signal<br>
-Electric field of Signal1<br>
-PD4 Signal<br>
-Electric field of Signal2(PD4)<br>
-Electric field of Optical Signal (3-4)<br>
-Optical Power Signal (3-4)<br>
-Digital Signal1 has been recovered<br>
+Electric field of Signal1(PD1)<br>
+PD1 Signal<br>
+Electric field of Signal2<br>
+PD2 Signal<br>
+Interference of of Electric field (1-2)<br>
+Optical Power Signal (1-2)<br>
+-> Digital Signal1 has been recovered<br>
 
 ![Figure_3](https://user-images.githubusercontent.com/30459885/228153167-0a6a2506-12ac-44ec-b3ce-ec123bf8b166.png)
-Electric field of Signal1(PD1)<br>
+Electric field of Signal1(PD3)<br>
 PD3 Signal<br>
-Electric field of Signal1<br>
+Electric field of Signal4<br>
 PD4 Signal<br>
-Electric field of Signal2(PD2)<br>
-Electric field of Optical Signal (1-2)<br>
-Optical Power Signal (1-2)<br>
-Digital Signal2 has been recovered<br>
+Electric field of Signal2(PD4)<br>
+Interference of Electric field (3-4)<br>
+Optical Power Signal (3-4)<br>
+-> Digital Signal 2 has been recovered<br>
 
 
