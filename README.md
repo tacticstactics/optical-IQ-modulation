@@ -1,5 +1,4 @@
 # optical-IQ-modulation
-optical-IQ-modulation
 
 "In-phase" and "quadrature"
 Optical I/Q modulator consists of two independently-controlled Mach–Zehnder interferometers (MZI) whose outputs are combined.<br>
