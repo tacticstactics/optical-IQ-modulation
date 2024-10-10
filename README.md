@@ -1,6 +1,8 @@
 # optical-IQ-modulation
 
-Optical IQ ("In-phase" and "quadrature") modulation. Two individual optical signals are demodulated.
+Optical IQ ("In-phase" and "quadrature") modulation.
+Coherent Optical Comuniation.
+Two individual optical signals are demodulated.
 
 "In-phase" and "quadrature"
 Optical I/Q modulator consists of two independently-controlled Mach–Zehnder interferometers (MZI) whose outputs are combined.
