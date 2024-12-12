@@ -2,14 +2,15 @@
 
 [Optical IQ Modulation](https://github.com/tacticstactics/Optical-IQ-modulation/blob/f1dc9cad4b69c8c050009716592bd2ae8f95f516/Optical_IQ%20modulation_main.ipynb)
 
-Optical IQ ("In-phase" and "quadrature") modulation.
-Coherent Optical Comuniation.
-Two individual optical signals are demodulated.
+Optical IQ modulation, or In-Phase and Quadrature Modulation, is a technique used in optical communication systems to modulate both the amplitude and phase of an optical signal. This modulation method is essential for transmitting high-speed data over long distances with minimal signal degradation.<br>
+<br>
+Coherent Optical Comuniation.<br>
+Two individual optical signals are demodulated.<br>
 
-"In-phase" and "quadrature"
-Optical I/Q modulator consists of two independently-controlled Mach–Zehnder interferometers (MZI) whose outputs are combined.
+"In-phase" and "quadrature"<br>
+Optical I/Q modulator consists of two independently-controlled Mach–Zehnder interferometers (MZI) whose outputs are combined.<br>
 
-The combining structure also includes a bias electrode that applies a phase delay between the two MZIs, allowing for the required phase control between the two modulator arms.
+The combining structure also includes a bias electrode that applies a phase delay between the two MZIs, allowing for the required phase control between the two modulator arms.<br>
 
 Tx<br>
 ![IQ modulation1](https://user-images.githubusercontent.com/30459885/228159937-5da4aa4e-00e3-413c-a731-7c4748cfd60f.png)
