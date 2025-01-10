@@ -23,7 +23,7 @@ Optical Power Signal (1+2)<br>
 Rx
 ![222](https://github.com/tacticstactics/optical-IQ-modulation/assets/30459885/8fbc7448-44f3-4d97-9479-ae09e8215572)
 
-Balanced Photodetector allows to recover original sinals.<br>
+At Rx side, Balanced Photodetector recovers original sinals.<br>
 
 ![Figure_2](https://user-images.githubusercontent.com/30459885/228153158-7815d279-4362-49e5-b11b-44d1998c534a.png)
 Electric field of Signal1(PD1)<br>
